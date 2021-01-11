@@ -63,21 +63,29 @@ function ToDoList(){
 
     return (
         <div className="todoapp">
-            <FormToDo addTodo = {addTodo} checkAllTodos = {checkAllTodos}></FormToDo>
+            <FormToDo 
+                addTodo = {addTodo} 
+                checkAllTodos = {checkAllTodos}
+            ></FormToDo>
             <div className="todo-list">
                 <ul>
                     {
-                        filterByStatus(todos,status).map((todo) => <ToDo 
-                                                        key={todo.id} 
-                                                        todo={todo} 
-                                                        updateTodo={updateTodo}
-                                                        removeTodo={removeTodo}
-                                                        updateComplete={updateComplete}
-                                                    ></ToDo>)
+                        filterByStatus(todos,status).map((todo) => 
+                            <ToDo 
+                                    key={todo.id} 
+                                    todo={todo} 
+                                    updateTodo={updateTodo}
+                                    removeTodo={removeTodo}
+                                    updateComplete={updateComplete}
+                            ></ToDo>)
                     }
                 </ul>
             </div>
-            <SelectToDo status={status} setStatus={setStatus} clearCompleted={clearCompleted}></SelectToDo>
+            <SelectToDo 
+                status={status} 
+                setStatus={setStatus} 
+                clearCompleted={clearCompleted}
+            ></SelectToDo>
         </div>
         
     )
