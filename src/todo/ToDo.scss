@@ -64,6 +64,10 @@ button {
     font-size: 90%;
     color: $textColor;
 }
+.warning{
+    background:rgba(255, 0, 0, 0.397);
+    border: 1px solid red;
+}
 input[type=text] {
     width: 90%;
     padding: 10px 20px;

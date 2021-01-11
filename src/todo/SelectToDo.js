@@ -13,7 +13,7 @@ function SelectToDo(props){
                 <button onClick={()=>setStatus('ALL')}>ALL</button>
                 <button onClick={()=>setStatus('ACTIVE')}>ACTIVE</button>
                 <button onClick={()=>setStatus('COMPLETED')}>COMPLETED</button>
-                <button onClick={()=>clear()}>ClearCompleted</button>
+                <button className="warning" onClick={()=>clear()}>ClearCompleted</button>
             </div>
         </div>
     )
