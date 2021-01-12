@@ -39,7 +39,7 @@ function ToDoList(){
 
     function removeTodo(id){
         setTodos(filterByStatus(todos,'REMOVE',id));
-    }
+    } 
 
     function checkAllTodos(){
         const updateList = todos.map(item => ({...item,isCompleted : !isCheckAll}))
@@ -60,6 +60,7 @@ function ToDoList(){
     function clearCompleted(){
         setTodos(todos.filter(item => !item.isCompleted));
     }
+
 
     return (
         <div className="todoapp">
